@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <!-- 头部搜索 -->
+    <header class="pyg_header">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </header>
+    <!-- 内容 -->
+    <div class="pyg_view">
+        <div class="pyg_slides">
+
+        </div>
+        <div class="pyg_cates">
+
+        </div>
+        <div class="pyg_list">
+
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <footer class="pyg_footer">
+        <a href='javascript:;'>
+            <span class="fa fa-home"></span>
+            <div>首页</div>
+        </a>
+        <a href="pages/category.html">
+            <span class="fa fa-th-list"></span>
+            <div>分类</div>
+        </a> 
+        <a href='pages/cart.html'>
+            <span class="fa fa-shopping-cart"></span>
+            <div>购物车</div>
+        </a>
+        <a href='pages/me.html'>
+            <span class="fa fa-user"></span>
+            <div>我的</div>
+        </a>
+    </footer>
+</body>
+
+</html>
+<script type="text/template" id="lbtTemp">
+    <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{data[data.length-1].image_src}}" /></a></div>
+                {{each data value index }}
+                <div class="mui-slider-item"><a href="#"><img src="{{value.image_src}}" /></a></div>
+                {{/each}}
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{data[0].image_src}}" /></a></div>
+            </div>
+            <!-- 索引 -->
+            <div class="mui-slider-indicator">
+               {{each data  value index}}
+               {{if index==0}}
+               <div class="mui-indicator mui-active"></div>
+               {{/if}}
+               {{if index!=0}}
+               <div class="mui-indicator"></div>
+               {{/if}}
+               {{/each}}
+          </div>
+     </div>
+</script>
+<script type="text/template" id='catesTemp'>
+    {{each  data value index}}
+     <a href="javascript:;">
+          <img src="{{value.image_src}}" alt="">
+     </a>
+     {{/each}}
+</script>
+<script type="text/template" id='listTemp'>
+    {{each data  value1 index1}}
+    <div class='goods_item'>
+
+        <img src="{{value1.group_img}}" alt="">
+        <ul>
+                {{each value1.goods value2 index2}}
+            <li>
+                <a href='pages/goods_detail.html?goods_id={{value2.goods_id}}' class='goods_detail'>
+                    <img src="{{value2.goods_small_logo}}" alt="">
+                    <div class='goods_name'>{{value2.goods_name}}</div>
+                    <div class='goods_price'>￥{{value2.goods_price}}</div>
+                </a>
+                <a href="pages/goods_list.html?cid={{value2.cat_id}}" class="goods_like mui-btn mui-btn-primary mui-btn-outlined">
+                        找相似
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/each}}
+</script>
+<script src="./lib/mui/js/mui.js"></script>
+<!-- 定制 -->
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/arttemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>

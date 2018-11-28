@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商品详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/goods_detail.css">
+
+
+</head>
+
+<body>
+    <!-- 头部搜索 -->
+    <header id="header" class="goods_nav_header mui-bar mui-bar-nav">
+        <h1 class="mui-title">商品详情</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a><a class="mui-icon  mui-pull-right"></a>
+    </header>
+    <!-- 内容 -->
+    <div class="pyg_view">
+
+    </div>
+    <!-- 尾部 -->
+    <footer class="pyg_ft_tool">
+        <a href="javascript:;">
+             <span class="fa fa-weixin"></span>
+             <div>客服</div>
+        </a>
+        <a href="javascript:;">
+             <span class="fa fa-phone"></span>
+             <div>客服</div>
+        </a>
+        <a href="javascript:;">立即购买</a>
+        <a id="add_btn" href="javascript:;">加入购物车</a>
+   </footer>
+</body>
+<script type="text/template" id="lbtTemp">
+    <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pics[pics.length-1].pics_mid_url}}" /></a></div>
+                {{each pics value index }}
+                <div class="mui-slider-item"><a href="#"><img src="{{value.pics_mid_url}}" /></a></div>
+                {{/each}}
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pics[0].pics_mid_url}}" /></a></div>
+            </div>
+            <!-- 索引 -->
+            <div class="mui-slider-indicator">
+               {{each pics value index}}
+               {{if index==0}}
+               <div class="mui-indicator mui-active"></div>
+               {{/if}}
+               {{if index!=0}}
+               <div class="mui-indicator"></div>
+               {{/if}}
+               {{/each}}
+          </div>
+     </div>
+     <div class="goods_name">{{goods_name}}</div>
+     <div class="goods_price"> ￥{{goods_price}}</div>
+     <ul class="goods_post_charge">
+        <li>
+             <span>已选</span>
+             <span>白色</span>
+        </li>
+        <li>
+             <span>促销</span>
+             <span>是</span>
+        </li>
+        <li>
+             <span>送至</span>
+             <span>上海市</span>
+        </li>
+        <li>
+             <span>运费</span>
+             <span>免运费</span>
+        </li>
+   </ul>
+   <div class="pyg_tab">
+    <div class="pyg_tab_title mui-segmented-control">
+         <a class="mui-control-item mui-active" href="#item1">图文详情</a>
+         <a class="mui-control-item" href="#item2">规格参数</a>
+    </div>
+    <div class="pyg_tab_content">
+         <div id="item1" class="mui-control-content mui-active">
+              {{@goods_introduce}}
+         </div>
+         <div id="item2" class="mui-control-content">
+              <ul>
+                   {{each  attrs value index}}
+                   <li>
+                        <div class="item_title">{{value.attr_name.split('-')[0]}}</div>
+                        <div class="item_content">
+                             <span>{{value.attr_name.split('-')[1]}}</span>
+                             <span>
+                                  {{value.attr_value}}
+                             </span>
+                        </div>
+                   </li>
+                   {{/each}}
+              </ul>
+         </div>
+    </div>
+    <!-- 内容 -->
+</div>
+</script>
+</html>
+
+
+<script src="../lib/mui/js/mui.js"></script>
+<!-- 定制 -->
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/Adaptation.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/goods_detail.js"></script>

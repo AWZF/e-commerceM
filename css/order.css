@@ -1,0 +1,51 @@
+#segmentedControl {
+  background-color: #fff;
+}
+
+.pyg_content #item1 {
+  padding: 20px;
+}
+
+.pyg_content ul {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pyg_content ul li {
+  padding: 10px;
+  font-size: 15px;
+  color: #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pyg_content ul li .order_info {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  overflow: hidden;
+}
+
+.pyg_content ul li .order_info .oi_title {
+  color: #555;
+  font-size: 18px;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
+.pyg_content ul li .order_info .order_price {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: red;
+  font-size: 18px;
+}
+
+body {
+  display: none;
+}
+/*# sourceMappingURL=order.css.map */

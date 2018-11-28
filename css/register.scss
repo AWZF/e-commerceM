@@ -1,0 +1,29 @@
+.pyg_header {
+    .mui-icon{
+        font-size: 30px;
+        position: relative;
+        z-index: 20;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-top: 1px;
+    }
+    .mui-title{
+        line-height: 40px;
+    }
+   
+    
+}
+.pyg_view{
+    padding: 8px;
+    .mui-btn{
+        margin-top: 8px;
+        width: 49%;
+    }
+    #code_btn{
+        position: absolute;
+        top: 0px;
+        right: 2px;
+        width: auto;
+        padding: 6px;
+    }
+}

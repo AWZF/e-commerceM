@@ -1,0 +1,85 @@
+body{
+    // 将框架的行高重置 
+    line-height: normal;
+}
+.pyg_view {
+    // padding-left: 80px;
+    padding-left: 0.8rem;
+    position: relative;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .left {
+        position: absolute;
+        left: 0;
+        top: 0%;
+        width: 0.8rem;
+        height: 100%;
+        overflow: hidden;
+        // overflow: scroll;
+
+        ul {
+            li {
+                height: 0.4rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 0.16rem;
+                a{
+                    color:#000;
+                }
+            }
+
+            .now {
+                background-color: #fff;
+                border-left: 0.03rem solid #0094ff;
+            }
+        }
+    }
+
+    .right {
+        height: 100%;
+        background-color: #fff;
+        overflow: hidden;
+        // overflow: scroll;
+
+        .goods_item {
+            .goods_title {
+                height: 0.4rem;
+                padding-left: 0.1rem;
+                line-height: 0.4rem;
+                color: #0094ff;
+                font-size: 0.14rem;
+            }
+
+            .goods_content {
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    li {
+                        width: 33.33%;
+
+                        a {
+                            img {
+                                display: block;
+                                width: 70%;
+                                margin: 0 auto;
+                            }
+
+                            div {
+                                text-align: center;
+                                font-size: 0.15rem;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

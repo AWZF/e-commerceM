@@ -1,0 +1,30 @@
+.pyg_header .mui-icon {
+  font-size: 30px;
+  position: relative;
+  z-index: 20;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-top: 1px;
+}
+
+.pyg_header .mui-title {
+  line-height: 40px;
+}
+
+.pyg_view {
+  padding: 8px;
+}
+
+.pyg_view .mui-btn {
+  margin-top: 8px;
+  width: 49%;
+}
+
+.pyg_view #code_btn {
+  position: absolute;
+  top: 0px;
+  right: 2px;
+  width: auto;
+  padding: 6px;
+}
+/*# sourceMappingURL=register.css.map */

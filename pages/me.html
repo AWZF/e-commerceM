@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商品列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/me.css">
+
+
+</head>
+
+<body>
+    <!-- 头部搜索 -->
+    <header id="pyg_nav_header" class="mui-bar mui-bar-nav">
+        <h1 class="mui-title">个人中心</h1>
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    </header>
+    <!-- 内容 -->
+    <div class="pyg_view">
+        <!-- 用户信息 -->
+        <div class="pyg_userinfo">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;">
+                        <span class="mui-icon mui-icon-contact mui-media-object mui-pull-left"></span>
+                        <div class="mui-media-body">
+                            <span class="username">13417112572</span>
+                            <p class="mui-ellipsis "><span class="user_email">59100235@qq.com</span></p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 订单管理 -->
+        <div class="pgy_order">
+            <div class="order_title">订单管理</div>
+            <div class="order_tabs">
+                <a href="/orders.html?type=1">
+                    <span class="fa fa-money"></span>
+                    <div class="item_name">待付款</div>
+                </a>
+                <a href="/orders.html?type=1">
+                    <span class="fa fa-envelope-open-o"></span>
+                    <div class="item_name">待收货</div>
+                </a>
+                <a href="/orders.html?type=1">
+                    <span class="fa fa-pie-chart "></span>
+                    <div class="item_name">退款/售后</div>
+                </a>
+                <a href="/orders.html?type=1">
+                    <span class="fa fa-shopping-bag "></span>
+                    <div class="item_name">全部订单</div>
+                </a>
+            </div>
+        </div>
+        <!-- 密码管理 -->
+        <div class="pyg_pwd">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">修改登录密码</a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">支付密码管理</a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">收货地址管理</a>
+                </li>
+            </ul>
+        </div>
+        <div class="pyg_contack">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <a class="">联系客服
+                        <span class="mui-pull-right">4000-xxx-xxx-xxx</span>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">意见反馈</a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a class="mui-navigate-right">关于我们</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 退出登录 -->
+        <div class="login_out">
+            <button id="btn_login_out" type="button" class="mui-btn mui-btn-block mui-btn-danger">退出登录</button>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <footer class="pyg_footer">
+        <a href='/index.html'>
+            <span class="fa fa-home"></span>
+            <div>首页</div>
+        </a>
+        <a href="category.html">
+            <span class="fa fa-th-list"></span>
+            <div>分类</div>
+        </a>
+        <a href='cart.html'>
+            <span class="fa fa-shopping-cart"></span>
+            <div>购物车</div>
+        </a>
+        <a href='me.html'>
+            <span class="fa fa-user"></span>
+            <div>我的</div>
+        </a>
+    </footer>
+</body>
+<script type='text/template' id='OrderTemp'>
+    {{each data  value index}}
+      <li>
+        <div class="order_info">
+          <div class="oi_title">订单编号</div>
+          <div class="oi_content">{{value.order_number}}</div>
+        </div>
+        <div class="order_price">￥{{value.order_price}}</div>
+      </li> 
+{{/each}}
+</script>
+
+</html>
+
+<script src="../lib/mui/js/mui.js"></script>
+<!-- 定制 -->
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/Adaptation.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/me.js"></script>

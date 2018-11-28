@@ -1,0 +1,53 @@
+.pyg_view {
+    padding: 10px;
+    background-color: #efeff4;
+
+    .pyg_userinfo,
+    .pgy_order,
+    .pyg_pwd,
+    .pyg_contack,
+    .login_out {
+        background-color: #fff;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .pyg_userinfo .mui-icon-contact {
+        font-size: 40px;
+    }
+
+    .pgy_order {
+        background-color: #fff;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+    }
+
+    .pgy_order .order_title {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .pgy_order .order_tabs {
+        display: flex;
+        text-align: center;
+    }
+
+    .pgy_order .order_tabs>a {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px 0;
+        font-size: 14px;
+    }
+
+    .pgy_order .order_tabs>a .fa {
+        font-size: 25px;
+    }
+
+    .login_out>#btn_login_out {
+        margin-bottom: 0;
+    }
+
+}

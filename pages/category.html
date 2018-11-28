@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>分类</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/category.css">
+</head>
+
+<body>
+    <!-- 头部搜索 -->
+    <header class="pyg_header">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="" data-input-clear="1" data-input-search="1"><span
+                class="mui-icon mui-icon-clear mui-hidden"></span><span class="mui-placeholder"><span class="mui-icon mui-icon-search"></span><span></span></span>
+        </div>
+    </header>
+    <!-- 内容 -->
+    <div class="pyg_view">
+        <div class="left">
+            <ul>
+            </ul>
+        </div>
+        <div class="right">
+            <ul class="ulbox">
+            </ul>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <footer class="pyg_footer">
+        <a href='/index.html'>
+            <span class="fa fa-home"></span>
+            <div>首页</div>
+        </a>
+        <a href="category.html">
+            <span class="fa fa-th-list"></span>
+            <div>分类</div>
+        </a>
+        <a href='cart.html'>
+            <span class="fa fa-shopping-cart"></span>
+            <div>购物车</div>
+        </a>
+        <a href='me.html'>
+            <span class="fa fa-user"></span>
+            <div>我的</div>
+        </a>
+    </footer>
+</body>
+
+<script type='text/template' id='leftTemp'>
+
+    {{each data value index }} 
+        <li class="{{index==0?'now':''}}"><a href="javascript:;" data-id="{{index}}">{{value.cat_name}}</a></li>
+    {{/each}}
+
+</script>
+<script type='text/template' id='rightTemp'>
+    {{each data value index}}
+    <li class="goods_item">
+        <div class="goods_title">{{value.cat_name}}</div>
+        <div class="goods_content">
+            <ul>
+                {{each value.children value2 index2}}
+                <li>
+                    <a href="goods_list.html?cid={{value2.cat_id}}">
+                        <img src=" {{ $imports.baseurl}}{{value2.cat_icon}}" alt="">
+                        <div>{{value2.cat_name}}</div>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </li>
+    {{/each}}
+    </script>
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../js/fastclick.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/category.js"></script>
+
+</html>

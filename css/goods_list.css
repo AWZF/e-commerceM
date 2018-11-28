@@ -1,0 +1,174 @@
+.goods_nav_header {
+  padding: 0;
+  background-color: #0094ff;
+  padding-left: 0.03rem;
+  padding-right: 0.03rem;
+}
+
+.goods_nav_header h1 {
+  color: #fff;
+}
+
+.goods_nav_header a {
+  color: #fff;
+}
+
+.pyg_view {
+  position: relative;
+}
+
+.goods_list {
+  list-style: none;
+  margin: 0;
+  padding: 0.05rem;
+}
+
+.goods_list li {
+  background-color: #fff;
+  margin-bottom: 0.05rem;
+  padding: 0.05rem 0;
+}
+
+.goods_list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.goods_list li a .list_left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.goods_list li a .list_left img {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+}
+
+.goods_list li a .list_right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.goods_list li a .list_right .goods_name {
+  line-height: 0.2rem;
+  font-size: 0.13rem;
+  color: #666;
+}
+
+.goods_list li a .list_right .goods_price {
+  color: red;
+  line-height: 0.2rem;
+  font-size: 0.18rem;
+}
+
+.mui-off-canvas-left,
+.mui-off-canvas-right {
+  background-color: #666;
+}
+
+.search_warp {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-left: 1px solid #ccc;
+}
+
+.search_warp .search_bar {
+  padding: 5px;
+  height: 40px;
+  background-color: #dedede;
+}
+
+.search_warp .search_bar div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search_warp .search_bar div input {
+  font-size: 14px;
+  color: #666;
+  background-color: #fff;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+}
+
+.search_warp .search_bar div button {
+  border-radius: 0;
+  height: 100%;
+  border: none;
+  float: 1;
+  background-color: #0094ff;
+  color: #fff;
+  -webkit-box-shadow: 0 0 1px 1px #19cbe1 inset;
+          box-shadow: 0 0 1px 1px #19cbe1 inset;
+}
+
+.search_warp .search_list {
+  overflow-y: hidden;
+  position: relative;
+  padding: 5px;
+}
+
+.search_warp .search_list .clear_key {
+  margin-bottom: 10px;
+}
+
+.search_warp .search_list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search_warp .search_list ul li {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #666;
+  padding: 5px;
+}
+
+.search_warp .search_list ul .local_word {
+  float: left;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-left: 5px;
+  padding: 3px;
+  font-size: 12px;
+}
+
+.search_warp .search_list ul .local_word a {
+  color: #666;
+}
+
+.mui-bar-nav ~ .mui-content .mui-pull-top-pocket {
+  top: 0px;
+}
+/*# sourceMappingURL=goods_list.css.map */

@@ -1,0 +1,118 @@
+.pyg_view {
+    background-color: #fff;
+}
+
+.goods_name {
+    padding: 0.05rem;
+    font-size: 0.14rem;
+    color: #666;
+    line-height: 0.18rem;
+}
+
+.goods_price {
+    font-size: 0.2rem;
+    padding: 0.05rem;
+    color: red;
+}
+
+.goods_post_charge {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        padding: 0.05rem;
+        font-size: .13rem;
+
+        span:nth-of-type(1) {
+            flex: 1;
+            color: #666;
+        }
+
+        span:nth-of-type(2) {
+            flex: 3;
+        }
+    }
+}
+
+.pyg_tab {
+    .pyg_tab_content {
+        #item2 {
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                padding: .05rem;
+                li {
+                    background-color: #fff;
+
+                    .item_title {
+                        font-size: .16rem;
+                        border-bottom: 1px solid #666;
+                        padding: 0.05rem;
+                    }
+
+                    .item_content {
+                        padding: 0.05rem;
+
+                        display: flex;
+                        font-size: 0.13rem;
+
+                        span:nth-child(1) {
+                            flex: 1;
+                        }
+
+                        span:nth-child(2) {
+                            flex: 4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.pyg_ft_tool{
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    width: 100%;
+    height: .5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    a{
+        flex: 1;
+        border-left: 1px solid #ccc;
+
+    }
+    a:nth-first-of-type(){
+        border-left: none;
+    }
+    a:nth-of-type(-n+2){
+        text-align: center;
+        margin-top: .05rem;
+        padding: .03rem;
+        color: #666;
+        .fa{
+            line-height: 0.2rem;
+            font-size: .18rem;
+
+        }
+        div{
+            font-size: .13rem;
+        }
+    } a:nth-last-child(-n+2){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.14rem;
+        color: #fff;
+        background-color: rgb(240, 173, 78);
+      }
+      a:last-child{
+        background-color: red;
+      }
+
+}

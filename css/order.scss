@@ -1,0 +1,47 @@
+.pyg_view {}
+
+#segmentedControl {
+    background-color: #fff;
+}
+
+.pyg_content {
+    #item1 {
+        padding: 20px;
+    }
+
+    ul {
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            padding: 10px;
+            font-size: 15px;
+            color: #666;
+            display: flex;
+
+            .order_info {
+                flex: 4;
+                overflow: hidden;
+
+                .oi_title {
+                    color: #555;
+                    font-size: 18px;
+                    white-space: normal !important;
+                    text-overflow: ellipsis;
+                    word-wrap: break-word;
+                }
+                .order_price{
+                    flex: 1;
+                    color: red;
+                    font-size: 18px;
+                  }
+            }
+
+        }
+    }
+}
+body{
+    display: none;
+  }
